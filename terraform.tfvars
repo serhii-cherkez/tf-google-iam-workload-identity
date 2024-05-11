@@ -1,5 +1,5 @@
 project_id                  = "project-id"
-git_repo                    = "https://github.com/serhii-cherkez/tf-google-iam-workload-identity"
+git_repo                    = "serhii-cherkez/tf-google-iam-workload-identity"
 identity_pool_name          = "Github pool"
 identity_pool_id            = "github-pool-id"
 identity_pool_provider_name = "Github provider"
