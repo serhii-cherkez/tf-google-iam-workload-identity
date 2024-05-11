@@ -1,1 +1,1 @@
-# tf-google-workload-identity
+# tf-google-iam-workload-identity
