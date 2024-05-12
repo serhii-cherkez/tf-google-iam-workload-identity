@@ -29,7 +29,3 @@ variable "google_service_account_name" {
 variable "google_service_account_id" {
   type = string
 }
-
-variable "iam_member_role" {
-  type = list(any)
-}
