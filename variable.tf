@@ -1,11 +1,9 @@
 variable "project_id" {
   type = string
-  #default = "project-id"
 }
 
 variable "git_repo" {
   type = string
-  #default = "https://github.com/serhii-cherkez/tf-google-iam-workload-identity"
 }
 
 variable "identity_pool_name" {
@@ -30,4 +28,8 @@ variable "google_service_account_name" {
 
 variable "google_service_account_id" {
   type = string
+}
+
+variable "iam_member_role" {
+  type = list(string)
 }

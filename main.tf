@@ -54,6 +54,6 @@ resource "google_service_account_iam_binding" "this" {
 # Should be adjusted for least privilege principle
 resource "google_project_iam_member" "this" {
   project = var.project_id
-  role    = "roles/editor"
+  role    = var.iam_member_role
   member  = "serviceAccount:${google_service_account.this.email}"
 }

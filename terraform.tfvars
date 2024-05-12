@@ -6,3 +6,7 @@ identity_pool_provider_name = "Github provider"
 identity_pool_provider_id   = "github-provider-id"
 google_service_account_name = "Github Service Account"
 google_service_account_id   = "github-service-account-id"
+iam_member_role = [
+  "roles/secretmanager.secretAccessor",
+  "roles/iam.serviceAccountTokenCreator"
+]
