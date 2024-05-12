@@ -31,5 +31,5 @@ variable "google_service_account_id" {
 }
 
 variable "iam_member_role" {
-  type = list(string)
+  type = list()
 }
