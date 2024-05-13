@@ -57,8 +57,8 @@ resource "google_project_iam_member" "this" {
   for_each = toset([
      "roles/editor",
      "roles/secretmanager.secretAccessor", 
-     "roles/iam.serviceAccountTokenCreator",
-     "roles/cloudkms.cryptoKeyVersions.useToEncrypt"])
+     "roles/iam.serviceAccountTokenCreator"
+     ])
   role    = each.key
   member  = "serviceAccount:${google_service_account.this.email}"
 }
