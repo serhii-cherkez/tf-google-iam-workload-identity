@@ -29,3 +29,7 @@ variable "google_service_account_name" {
 variable "google_service_account_id" {
   type = string
 }
+variable "role" {
+  type = list(string)
+  default = []
+}
