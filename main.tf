@@ -50,9 +50,14 @@ resource "google_service_account_iam_binding" "this" {
     "principalSet://iam.googleapis.com/${google_iam_workload_identity_pool.this.name}/attribute.repository/${var.git_repo}"
   ]
 }
-
+# Should be adjusted for least privilege principle
 resource "google_project_iam_member" "this" {
   project = var.project_id
-  for_each    = toset(var.role)
+  for_each    =  [
+     "roles/editor",
+     "roles/secretmanager.secretAccessor", 
+     "roles/iam.serviceAccountTokenCreator"
+     ]
+  role = each.key
   member  = "serviceAccount:${google_service_account.this.email}"
 }
