@@ -53,6 +53,6 @@ resource "google_service_account_iam_binding" "this" {
 
 resource "google_project_iam_member" "this" {
   project = var.project_id
-  role    = toset(var.role)
+  for_each    = toset(var.role)
   member  = "serviceAccount:${google_service_account.this.email}"
 }
